@@ -22,11 +22,13 @@ repositories {
     maven("https://jitpack.io")
     maven("https://maven.enginehub.org/repo/")
     maven("https://repo.papermc.io/repository/maven-public/")
+    maven("https://nexuslite.gcnt.net/repos/other/")
 }
 
 dependencies {
     paperweight.paperDevBundle("1.20.1-R0.1-SNAPSHOT")
     implementation("xyz.jpenilla:reflection-remapper:0.1.0-SNAPSHOT")
+    implementation("com.tcoded:FoliaLib:0.2.5")
 
     // Zstd Compression Library
     implementation("com.github.luben:zstd-jni:1.5.5-4")
@@ -74,5 +76,6 @@ tasks {
         // helper function to relocate a package into our package
         fun reloc(pkg: String) = relocate(pkg, "com.moulberry.axiom.dependency.$pkg")
         reloc("xyz.jpenilla:reflection-remapper")
+        reloc("com.tcoded:FoliaLib")
     }
 }

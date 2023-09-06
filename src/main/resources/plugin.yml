@@ -9,4 +9,4 @@ permissions:
   axiom.*:
     description: Allows use of all Axiom features
     default: op
-
+folia-supported: true

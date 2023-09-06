@@ -26,6 +26,7 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class AxiomPaper extends JavaPlugin implements Listener {
+    FoliaLib foliaLib = new FoliaLib(this);
 
     @Override
     public void onEnable() {
@@ -74,7 +75,7 @@ public class AxiomPaper extends JavaPlugin implements Listener {
             }
         });
 
-        Bukkit.getScheduler().scheduleSyncRepeatingTask(this, () -> {
+        foliaLib.getImpl().runTimerAsync(() -> {
             HashSet<UUID> newActiveAxiomPlayers = new HashSet<>();
 
             for (Player player : Bukkit.getServer().getOnlinePlayers()) {
