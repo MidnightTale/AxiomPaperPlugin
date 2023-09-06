@@ -2,6 +2,7 @@ package com.moulberry.axiom;
 
 import com.moulberry.axiom.buffer.CompressedBlockEntity;
 import com.moulberry.axiom.packet.*;
+import com.tcoded.folialib.FoliaLib;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.Channel;
 import io.papermc.paper.event.player.PlayerFailMoveEvent;
